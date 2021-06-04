@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "583419962617",
+    "firebase_url": "https://gustumi-c9faa.firebaseio.com",
+    "project_id": "gustumi-c9faa",
+    "storage_bucket": "gustumi-c9faa.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:583419962617:android:6b853d254f3055974fae28",
+        "android_client_info": {
+          "package_name": "com.example.gustumi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "583419962617-oodnrf75gibo5gjhmksd124lpq6sted3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.gustumi",
+            "certificate_hash": "8c0d455327406c82f9d8223c48a827b0cd373f7d"
+          }
+        },
+        {
+          "client_id": "583419962617-ea368qgqliekhn1lveuqsirnbg72r56l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSB4yT2K3TaHoLcXKvaqQj9cgYfMpgn-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "583419962617-ea368qgqliekhn1lveuqsirnbg72r56l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

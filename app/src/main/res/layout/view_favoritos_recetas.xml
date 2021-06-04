@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:id="@+id/linearLayoutAprende"
+android:layout_width="320dp"
+android:layout_height="wrap_content"
+android:layout_margin="10dp"
+android:background="?android:attr/selectableItemBackground"
+android:orientation="vertical">
+
+<!--<TextView
+    android:id="@+id/textViewNombreCategoria"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="@string/textViewNombreCategoria"
+    android:textColor="@color/verde1"/>-->
+
+
+<TextView
+    android:id="@+id/textViewTituloAprende"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:text="@string/textViewNombreReceta"
+    android:textAlignment="center"
+    android:textColor="@color/verde1"
+    android:textSize="14sp"
+    android:textStyle="bold" />
+
+
+<!--<ImageView
+    android:id="@+id/imgReceta"
+    android:layout_width="150dp"
+    android:layout_height="150dp"
+    android:layout_marginStart="80dp"
+    android:layout_marginTop="10dp"
+    android:src="@drawable/logo" />-->
+
+<!--<ToggleButton
+    android:id="@+id/tgBtnFav"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="40dp"
+    android:checked="false"
+    android:layout_gravity="center"
+    android:textOff="Añadir a Favoritos"
+    android:textOn="Eliminar de Favoritos"
+    android:background="@drawable/color_boton"
+    android:textColor="@drawable/texto_boton"
+    android:padding="10dp"/>
+
+<ToggleButton
+    android:id="@+id/toggleButtonFav"
+    android:layout_width="50dp"
+    android:layout_height="50dp"
+    android:layout_gravity="center"
+    android:layout_marginTop="40dp"
+    android:background="@drawable/button_favorite_selector"
+    android:checked="false"
+    android:textOff=""
+    android:textOn="" />-->
+
+<View
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:layout_marginTop="10dp"
+    android:background="@color/amarillo1" />
+</LinearLayout>

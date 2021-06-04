@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarillo2"
+    tools:context=".activities.OlvidarContrasenaActivity">
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="28dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewContrasenaOlvidada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/textViewContrasenaOlvidada"
+        android:textColor="@color/verde2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo" />
+
+    <!--cardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="381dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="32dp"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewContrasenaOlvidada"
+        app:layout_constraintVertical_bias="0.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="350dp"
+            android:layout_height="330dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="56dp"
+            app:layout_constraintTop_toBottomOf="@+id/logo"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <EditText
+                android:id="@+id/inputCorreo"
+                android:layout_width="330dp"
+                android:layout_height="46dp"
+                android:layout_marginTop="60dp"
+                android:backgroundTint="@color/amarillo1"
+                android:hint="@string/inputCorreo"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:paddingStart="20dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"
+                android:paddingBottom="10dp"
+                android:textColor="@color/verde2"
+                android:textColorHint="@color/verde2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/btnRestablecerContrasena"
+                android:layout_width="200dp"
+                android:layout_height="38dp"
+                android:layout_marginTop="84dp"
+                android:background="@color/amarillo1"
+                android:text="@string/btnRestablecerContrasena"
+                android:textAllCaps="false"
+                android:textColor="@color/verde1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.464"
+                app:layout_constraintStart_toStartOf="@+id/inputCorreo"
+                app:layout_constraintTop_toBottomOf="@+id/inputCorreo" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

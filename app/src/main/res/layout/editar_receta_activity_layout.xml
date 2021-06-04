@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarillo2"
+    tools:context=".activities.EditarRecetaActivity">
+
+    <TextView
+        android:id="@+id/textViewEditarReceta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Editar receta"
+        android:textColor="@color/verde2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--cardView -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="394dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="81dp"
+        android:layout_marginBottom="4dp"
+        android:textAlignment="center"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                tools:layout_editor_absoluteX="0dp">
+
+                <LinearLayout
+                    android:layout_width="367dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:id="@+id/imgFotoReceta"
+                            android:layout_width="210dp"
+                            android:layout_height="200dp"
+                            android:layout_marginEnd="50dp"
+                            android:src="@drawable/icono_seleccionar_img_receta" />
+
+                        <Button
+                            android:id="@+id/btnSeleccionarImg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="10dp"
+                            android:background="@color/amarillo1"
+                            android:padding="5dp"
+                            android:text="Seleccionar imagen..."
+                            android:textAllCaps="false"
+                            android:textColor="@color/verde1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <EditText
+                        android:id="@+id/editTextNombreReceta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:hint="Nombre de la receta"
+                        android:inputType="textNoSuggestions" />
+
+                    <EditText
+                        android:id="@+id/editTextTiempoElaboracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:hint="Tiempo de elaboración"
+                        android:inputType="textNoSuggestions" />
+
+                    <EditText
+                        android:id="@+id/editTextIngredientes"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:hint="Ingredientes"
+                        android:inputType="textNoSuggestions"/>
+
+
+                    <EditText
+                        android:id="@+id/editTextElaboracion"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:hint="Elaboración (Proceso)"
+                        android:inputType="textNoSuggestions" />
+
+                    <Button
+                        android:id="@+id/btnActualizarReceta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="40dp"
+                        android:background="@color/amarillo1"
+                        android:text="Actualizar receta"
+                        android:textAllCaps="false"
+                        android:textColor="@color/verde1"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

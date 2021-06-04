@@ -1,0 +1,114 @@
+<resources>
+    <string name="app_name">gustumi</string>
+    <string name="logo"></string>
+
+    <!--MainActivity-->
+    <string name="imageViewPerfil">Perfil</string><!--Icono perfil usuario en MainActivity-->
+    <string name="textViewPregunta">¡Bienvenid@ a gustumi!</string>
+    <string name="textViewIngredientesDispones">¿Qué te apetece cocinar?</string>
+    <string name="BotonIngredientes">Ingredientes</string>
+    <string name="textViewExplorarCategorias">¿Qué plato te apetece?</string>
+    <string name="BotonExplorarCategorias">Explorar categorías</string>
+
+
+    <!--IngredienteActivity-->
+    <string name="textViewIngredientes">Elige un ingrediente para obtener recetas</string>
+
+    <!--ExplorarCategoriasActivity-->
+    <string name="textViewElegirCategorias">Categorías</string>
+
+
+    <!--Detalle receta-->
+    <string name="textViewDetalleReceta">Detalle de la receta</string>
+
+
+    <!--Recetas ingrediente-->
+    <string name="textViewRecetasIngrediente">recetas_ingrediente_activity</string>
+
+
+    <!--View_ingrediente-->
+    <string name="textViewNombreIngrediente">Nombre del ingrediente</string>
+
+
+    <!--View_result_busqueda   (RECETAS)-->
+    <string name="textViewNombreReceta">Nombre de la receta</string>
+
+
+    <!--View_Aprende-->
+
+
+    <!-- FORMULARIO: REGISTRO, INICIO DE SESIÓN Y RESTABLECER CONTRASEÑA-->
+    <string name="inputNombreUsuario">Nombre de usuario</string>
+    <string name="inputCorreo">Introduce tu correo</string>
+    <string name="inputContrasena">Contraseña</string>
+    <string name="inputConfirmarContrasena">Confirmar contraseña</string>
+    <string name="btnRegistrarse">Registrarse</string>
+    <string name="btnIniciarSesion">Iniciar Sesión</string>
+    <string name="btnRestablecerContrasena">Restablecer Contraseña</string>
+
+    <string name="textViewCrearCuenta">Crear Cuenta</string>
+    <string name="textViewTienesCuenta">¿Tienes cuenta?</string>
+
+    <string name="textViewIniciarSesion">Iniciar Sesión</string>
+    <string name="textViewolvidarContrasena">¿Has olvidado la contraseña?</string>
+    <string name="textViewNoTienesCuenta">¿No tienes cuenta?</string>
+    <string name="textViewRegistrarse">Registrarse</string>
+    <string name="textViewContrasenaOlvidada">¿Has olvidado tu contraseña?</string>
+
+    <!-- CATEGORÍAS -->
+    <string name="catArroces">Arroces</string>
+    <string name="catBowls">Bowls</string>
+    <string name="catCarnes">Carnes</string>
+    <string name="catDesayunos">Desayunos</string>
+    <string name="catEnPocoTiempo">En poco tiempo</string>
+    <string name="catHamburguesas">Hamburguesas</string>
+    <string name="catHorno">Horno</string>
+    <string name="catLegumbres">Legumbres</string>
+    <string name="catPanes">Panes</string>
+    <string name="catPastas">Pastas</string>
+    <string name="catPescadosYMariscos">Pescados y mariscos</string>
+    <string name="catPizzas">Pizzas</string>
+    <string name="catPostres">Postres</string>
+    <string name="catSopasYCremas">Sopas y Cremas"</string>
+    <string name="catTostadas">Tostadas</string>
+    <string name="catUntablesYSalsas">Untables y Salsas</string>
+    <string name="catVegetariano">Vegetariano</string>
+    <string name="catVerduras">Verduras</string>
+
+    <!-- PERFIL USUARIO -->
+    <string name="textViewPerfilUsuario">Perfil</string>
+    <string name="textViewUserName">Nombre de usuario:</string>
+    <string name="textViewNombreUsuario">Nombre de usuario</string>
+    <string name="textViewcorreoUsuario">email@emailusuario.com</string>
+    <string name="btnFavoritos">Favoritos</string>
+    <string name="btnCerrarSesion">Cerrar Sesión</string>
+
+
+    <!--ResultadoBusquedaActivity-->
+    <string name="textViewResultadoBusqueda">Nombre de la categoria</string>
+
+
+    <!-- view_result_busqueda_recetas-->
+    <string name="textViewNombreCategoria">Nombre de la categoría</string>
+
+
+    <!--DetalleRecetaActivity-->
+    <string name="tViewNombreRecetaDetalle">Nombre de la receta</string>
+    <string name="tViewTiempoElaboracionDetalle">X min.</string>
+    <string name="tViewTituloIngredientesDetalle">Ingredientes</string>
+    <string name="tViewIngredientesDetalle">Lista de ingredientes</string>
+    <string name="tViewTituloElaboracionDetalle">Elaboración</string>
+    <string name="tViewElaboracionDetalle">Proceso de elaboración</string>
+    <string name="tViewTituloTiempoElaboracionDetalle">Tiempo</string>
+
+
+    <!--AprendeActivity-->
+    <string name="textViewAprendeConcepto">En esta sección podrás descubrir ideas para combinar ingredientes, sustituir alimentos por otros mejores, sugerencias para ampliar tu abanico a la hora de crear platos y muchas cosas más.</string>
+
+
+    <!--FavoritosActivity-->
+    <string name="textViewFavoritos">Favoritos</string>
+
+
+</resources>
+

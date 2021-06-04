@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/amarillo2"
+    tools:context=".activities.DetalleRecetaActivity">
+
+
+    <!--cardView -->
+
+    <ImageView
+        android:id="@+id/btnAtras"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/icono_atras"
+        app:layout_constraintBottom_toTopOf="@+id/cardView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="394dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="4dp"
+        android:textAlignment="center"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.647"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="367dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                tools:layout_editor_absoluteX="0dp">
+
+
+                <!--<TextView
+                    android:id="@+id/textViewPrueba"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="TextViewPrueba"
+                    app:layout_constraintBottom_toTopOf="@+id/imgRecetaDetalle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="MissingConstraints" />-->
+
+                <ImageView
+                    android:id="@+id/imgRecetaDetalle"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toTopOf="@+id/tViewNombreRecetaDetalle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <View
+                    android:id="@+id/viewDetalle1"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/verde2"
+                    app:layout_constraintTop_toBottomOf="@+id/imgRecetaDetalle" />
+
+                <TextView
+                    android:id="@+id/tViewNombreRecetaDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/tViewNombreRecetaDetalle"
+                    android:textAlignment="center"
+                    android:textColor="@color/amarillo1"
+                    android:textSize="26sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.497"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/viewDetalle1" />
+
+                <View
+                    android:id="@+id/viewDetalle2"
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:background="@color/verde2"
+                    app:layout_constraintBottom_toTopOf="@+id/tViewTiempoElaboracionDetalle"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewNombreRecetaDetalle" />
+
+                <!-- <ToggleButton
+                      android:id="@+id/toggleButtonFav"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginBottom="16dp"
+                      android:background="@color/amarillo2"
+                      android:onClick="onClickToggleButtonFav"
+
+                      android:textOn="Favorito"
+                      android:textOff="Añadir a Favoritos"
+
+                      app:layout_constraintBottom_toTopOf="@+id/tViewNombreRecetaDetalle"
+                      app:layout_constraintEnd_toEndOf="parent"
+                      app:layout_constraintHorizontal_bias="0.929"
+                      app:layout_constraintStart_toStartOf="parent"
+                      app:layout_constraintTop_toBottomOf="@+id/imgRecetaDetalle"
+                      app:layout_constraintVertical_bias="1.0" />-->
+
+
+                <ImageView
+                    android:id="@+id/imgTiempo"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:src="@drawable/ic_tiempo_elaboracion"
+                    app:layout_constraintEnd_toStartOf="@+id/tViewTiempoElaboracionDetalle"
+                    app:layout_constraintHorizontal_bias="0.95"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDetalle2" />
+
+                <TextView
+                    android:id="@+id/tViewTiempoElaboracionDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="256dp"
+                    android:text="@string/tViewTiempoElaboracionDetalle"
+                    android:textColor="@color/verde1"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDetalle2" />
+
+
+                <ToggleButton
+                    android:id="@+id/toggleButtonFav"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:background="@drawable/button_favorite_selector"
+                    android:checked="false"
+                    android:text=""
+                    android:textOff=""
+                    android:textOn=""
+                    app:layout_constraintBottom_toTopOf="@+id/tViewTituloIngredientesDetalle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.74"
+                    app:layout_constraintStart_toEndOf="@+id/tViewTiempoElaboracionDetalle"
+                    app:layout_constraintTop_toBottomOf="@+id/viewDetalle2"
+                    app:layout_constraintVertical_bias="1.0" />
+
+                <ImageView
+                    android:id="@+id/imgCarrito"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="23dp"
+                    android:src="@drawable/ic_ingredientes_cesta"
+                    app:layout_constraintBottom_toTopOf="@+id/tViewIngredientesDetalle"
+                    app:layout_constraintEnd_toStartOf="@+id/tViewTituloIngredientesDetalle"
+                    app:layout_constraintHorizontal_bias="0.97"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tViewTituloIngredientesDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/tViewTituloIngredientesDetalle"
+                    android:textColor="@color/verde3"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTiempoElaboracionDetalle" />
+
+
+                <TextView
+                    android:id="@+id/tViewIngredientesDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/tViewIngredientesDetalle"
+                    android:textColor="@color/verde1"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.054"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTituloIngredientesDetalle" />
+
+
+                <ImageView
+                    android:id="@+id/imgElaboracion"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="23dp"
+                    android:src="@drawable/ic_elaboracion"
+                    app:layout_constraintBottom_toTopOf="@+id/tViewElaboracionDetalle"
+                    app:layout_constraintEnd_toStartOf="@+id/tViewTituloElaboracionDetalle"
+                    app:layout_constraintHorizontal_bias="0.97"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tViewTituloElaboracionDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:text="@string/tViewTituloElaboracionDetalle"
+                    android:textColor="@color/verde3"
+                    android:textSize="18sp"
+
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.488"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewIngredientesDetalle" />
+
+
+                <TextView
+                    android:id="@+id/tViewElaboracionDetalle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:paddingBottom="30dp"
+                    android:text="@string/tViewElaboracionDetalle"
+                    android:textColor="@color/verde1"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.072"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tViewTituloElaboracionDetalle" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

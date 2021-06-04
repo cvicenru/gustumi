@@ -1,0 +1,857 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/amarillo2"
+    tools:context=".activities.ExplorarCategoriasActivity">
+
+    <ImageView
+        android:id="@+id/btnAtras"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/textViewElegirCategorias"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="6dp"
+        android:layout_toStartOf="@+id/imageViewLogo"
+        android:src="@drawable/icono_atras" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo" />
+
+    <!--CATEGORÍAS-->
+
+    <TextView
+        android:id="@+id/textViewElegirCategorias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewLogo"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="138dp"
+        android:layout_marginTop="-4dp"
+        android:text="@string/textViewElegirCategorias"
+        android:textAlignment="center"
+        android:textColor="@color/verde2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="90dp">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:id="@+id/idGrid"
+                    android:layout_width="match_parent"
+                    android:layout_height="900dp"
+                    android:layout_below="@+id/textViewElegirCategorias"
+                    android:layout_marginTop="20dp"
+                    android:padding="4dp"
+                    app:columnCount="2"
+                    app:rowCount="3"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="-16dp">
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewArroces"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        android:onClick="onClickArroces"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/arroces" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catArroces"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catArroces"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewBolws"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/bowls" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickBowls"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catBowls"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catBowls"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewCarnes"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/carnes" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickCarnes"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catCarnes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catCarnes"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewDesayunos"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/desayunos" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickDesayunos"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catDesayunos"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catDesayunos"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewEnPocoTiempo"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/enpocotiempo" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickEnPocoTiempo"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catEnPocoTiempo"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catEnPocoTiempo"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewHamburguesas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/hamburguesas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickHamburguesas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catNueva"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catHamburguesas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewHorno"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/horno" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickHorno"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catHorno"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catHorno"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewLegumbres"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/legumbres" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickLegumbres"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catLegumbres"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catLegumbres"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewPanes"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/panes" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickPanes"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catPanes"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catPanes"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewPastas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pastas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickPastas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catPastas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catPastas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewPescadosYMariscos"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pescadosymariscos" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickPescadosYMariscos"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catPescadosYMariscos"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catPescadosYMariscos"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewPizzas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pizzas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickPizzas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catPizzas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catPizzas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewPostres"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/postres" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickPostres"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catPostres"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catPostres"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewSopasYCremas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/sopasycremas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickSopasYCremas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catSopasYCremas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catSopasYCremas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewTostadas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/tostadas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickTostadas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catTostadas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catTostadas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewUntablesYSalsas"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/untablesysalsas" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickUntablesYSalsas"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catUntablesYSalsas"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catUntablesYSalsas"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewVegetariano"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/vegetariano" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickVegetariano"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catVegetariano"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catVegetariano"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardViewVerduras"
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_marginBottom="10dp"
+                        android:foreground="?selectableItemBackground"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="6dp"
+                        app:layout_columnWeight="1"
+                        app:layout_rowWeight="1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="true"
+                            android:alpha="0.3"
+                            android:background="@color/blanco"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/verduras" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:onClick="onClickVerduras"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/catVerduras"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center_horizontal"
+                                android:text="@string/catVerduras"
+                                android:textAlignment="center"
+                                android:textColor="@color/verde1"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+
+                </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

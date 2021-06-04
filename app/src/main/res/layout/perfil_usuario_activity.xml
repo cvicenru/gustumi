@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco"
+    tools:context=".activities.PerfilUsuarioActivity">
+
+
+    <ImageView
+        android:id="@+id/btnAtras"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:src="@drawable/icono_atras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.005"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:contentDescription="@string/logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAtras" />
+
+    <TextView
+        android:id="@+id/textViewPerfilUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="@string/textViewPerfilUsuario"
+        android:textAlignment="center"
+        android:textColor="@color/verde2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/cardView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogo"
+        app:layout_constraintVertical_bias="0.489" />
+
+
+    <!--cardView-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="381dp"
+        android:layout_height="500dp"
+        app:cardBackgroundColor="@color/blanco"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/textViewPerfilUsuario"
+        app:layout_constraintVertical_bias="0.797">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewcorreoUsuario"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.727">
+
+                <TextView
+                    android:id="@+id/textViewUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/textViewUserName"
+                    android:textColor="@color/verde2"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@+id/textViewcorreoUsuario"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewNombreUsuario"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0" />
+
+                <TextView
+                    android:id="@+id/textViewNombreUsuario"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="5dp"
+                    android:text="@string/textViewNombreUsuario"
+                    android:textAlignment="viewStart"
+                    android:textColor="@color/verde1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+
+                    app:layout_constraintBottom_toTopOf="@+id/textViewcorreoUsuario"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.25" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textViewcorreoUsuario"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/textViewcorreoUsuario"
+                android:textAlignment="center"
+                android:textColor="@color/verde3"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.128" />
+
+
+            <Button
+                android:id="@+id/btnFavoritos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/amarillo1"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/btnFavoritos"
+                android:textAllCaps="false"
+                android:textColor="@color/verde1"
+                android:textSize="18dp"
+                app:layout_constraintBottom_toTopOf="@+id/btnCerrarSesion"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewcorreoUsuario"
+                app:layout_constraintVertical_bias="0.367" />
+
+            <Button
+                android:id="@+id/btnCerrarSesion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                android:background="@color/verde1"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:text="@string/btnCerrarSesion"
+                android:textAllCaps="false"
+                android:textColor="@color/amarillo1"
+                android:textSize="14dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

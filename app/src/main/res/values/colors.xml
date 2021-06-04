@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#02735E</color>
+    <color name="colorPrimaryDark">#014040</color>
+    <color name="colorAccent">#03A678</color>
+
+
+<!-- PALETA DE COLORES-->
+    <color name="verde1">#014040</color>
+    <color name="verde2">#02735E</color>
+    <color name="verde3">#03A678</color>
+    <color name="amarillo1">#FFD56F</color>
+    <color name="amarillo2">#FFFF9F</color>
+    <color name="blanco">#FFFFFF</color>
+
+
+    
+
+
+
+</resources>
